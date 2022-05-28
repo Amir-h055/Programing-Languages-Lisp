@@ -14,4 +14,6 @@
 )
 
 ; test
-(print (tribonacci 7))
+(print (tribonacci 7)) ; should print (0 0 1 1 2 4 7)
+(print (tribonacci 0)) ; should print NIL
+
