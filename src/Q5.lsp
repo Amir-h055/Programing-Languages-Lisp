@@ -19,3 +19,38 @@
 (print (tribonacci 1))
 (print (tribonacci 10))
 
+;------------------------------------------------------------------
+
+;gnu clisp  2.49.60
+(defun reverse2 (lst)
+(cond ((null lst) '())
+(t (append (reverse2 (cdr lst)) (list (car lst))))))
+
+(defun tribonacci-iter (n) 
+    (if (= n 0) 
+        nil
+        (let* ( (a 0) (b 0) (c 1) )
+              (let (lst) 
+                   (dotimes (i n lst)
+                       (setf lst (cons a lst) )
+                       (setf new (+ a b c) )
+                       (setf a b)
+                       (setf b c)
+                       (setf c new)
+                    )
+                (reverse2 lst)
+               )
+        )
+    )
+)
+          
+
+(print (tribonacci-iter 7))
+(print (tribonacci-iter 0))
+(print (tribonacci-iter 1))
+
+
+
+
+
+
